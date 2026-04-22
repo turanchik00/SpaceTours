@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+:root {
+    --primary-color: #fff;
+    --secondary-color: #00aaff;
+    --bg-dark: #050505;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: var(--primary-color);
+    overflow: hidden;
+}
+
+/* <========== Ulduzlar Effektləri ===========> */
+#stars-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: blink 2s infinite ease-in-out;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* <========== Geri Qayıt Düyməsi ===========> */
+.back-link {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 10;
+    transition: 0.3s;
+}
+
+.back-link:hover {
+    color: var(--secondary-color);
+    transform: translateX(-5px);
+}
+
+/* <========== Login Box Styling ===========> */
+.login-wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at center, #0a1128 0%, #000 100%);
+    position: relative;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 420px;
+    background: rgba(15, 15, 15, 0.85);
+    backdrop-filter: blur(15px);
+    border: 1px solid #222;
+    padding: 45px;
+    border-radius: 25px;
+    z-index: 1;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--secondary-color);
+}
+
+.login-header p {
+    color: #888;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 13px 18px;
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 10px;
+    color: #fff;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 10px rgba(0, 170, 255, 0.2);
+}
+
+/* Şifrəni unut və Məni xatırla */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 13px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #888;
+}
+
+.remember-me input {
+    accent-color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.forgot-pass {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.forgot-pass:hover {
+    text-decoration: underline;
+}
+
+/* <========== Daxil Ol Düyməsi ===========> */
+.btn-login {
+    width: 100%;
+    padding: 15px;
+    background: var(--secondary-color); /* Normalda Mavi fon */
+    color: #000; /* Normalda Qara mətn */
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    letter-spacing: 1px;
+}
+
+.btn-login:hover {
+    background: #fff; /* Hover-də Ağ fon */
+    color: var(--secondary-color); /* Hover-də Mavi mətn */
+    box-shadow: 0 0 25px rgba(0, 170, 255, 0.5);
+}
+
+/* <========== Footer Linkləri ===========> */
+.login-footer {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.login-footer p {
+    color: #888;
+    font-size: 14px;
+}
+
+.login-footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 5px;
+    transition: 0.3s;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+    opacity: 0.9;
+}

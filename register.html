@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Tours | Qeydiyyat</title>
+    <link rel="stylesheet" href="./assets/css/register.css">
+    <script src="https://kit.fontawesome.com/3224d4e331.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/dist/css/all.min.css">
+</head>
+<body>
+    <div id="stars-container"></div>
+
+    
+
+    <div class="register-wrapper">
+        <div class="register-box">
+            <a href="index.html" class="back-link">
+            <i class="fas fa-chevron-left"></i>Geri
+        </a>
+            <div class="register-header">
+                <h2 class="logo">SPACE<span>TOURS</span></h2>
+                <p>Kainat macərasına qoşulmaq üçün qeydiyyatdan keçin.</p>
+            </div>
+
+            <form action="#">
+                <div class="input-group">
+                    <label>Tam Adınız</label>
+                    <input type="text" placeholder="Məs: Fuad Saatov" required>
+                </div>
+
+                <div class="input-group">
+                    <label>E-poçt ünvanı</label>
+                    <input type="email" placeholder="nümunə@space.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Şifrə</label>
+                    <input type="password" placeholder="••••••••" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Şifrəni təkrarla</label>
+                    <input type="password" placeholder="••••••••" required>
+                </div>
+
+                <div class="terms">
+                    <input type="checkbox" id="accept-terms">
+                    <label for="accept-terms">İstifadəçi şərtləri ilə razıyam</label>
+                </div>
+
+                <button type="submit" class="btn-register">Hesab Yarat</button>
+            </form>
+
+            <div class="register-footer">
+                <p>Artıq hesabınız var? <a href="login.html">Daxil olun</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const container = document.getElementById('stars-container');
+        for (let i = 0; i < 150; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.animationDelay = Math.random() * 2 + 's';
+            container.appendChild(star);
+        }
+    </script>
+</body>
+</html>

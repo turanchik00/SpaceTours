@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Tours | Daxil Ol</title>
+    <link rel="stylesheet" href="/assets/css/login.css">
+        <script src="https://kit.fontawesome.com/3224d4e331.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/dist/css/all.min.css">
+</head>
+<body>
+    <div id="stars-container"></div>
+    <div class="login-wrapper">
+        <div class="login-box">
+            <a href="index.html" class="back-link">
+        <i class="fas fa-chevron-left"></i>Geri
+    </a>
+            <div class="login-header">
+                <h2 class="logo">SPACE<span>TOURS</span></h2>
+                <p>Yenidən xoş gəldiniz! Kosmik hesabınıza daxil olun.</p>
+            </div>
+
+            <form action="#">
+                <div class="input-group">
+                    <label>E-poçt ünvanı</label>
+                    <input type="email" placeholder="nümunə@space.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Şifrə</label>
+                    <input type="password" placeholder="••••••••" required>
+                </div>
+
+                <div class="form-options">
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Məni xatırla</label>
+                    </div>
+                    <a href="#" class="forgot-pass">Şifrəni unutmusunuz?</a>
+                </div>
+
+                <button type="submit" class="btn-login">Daxil Ol</button>
+            </form>
+
+            <div class="login-footer">
+                <p>Hesabınız yoxdur? <a href="register.html">Qeydiyyatdan keçin</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const container = document.getElementById('stars-container');
+        for (let i = 0; i < 150; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.animationDelay = Math.random() * 2 + 's';
+            container.appendChild(star);
+        }
+    </script>
+</body>
+</html>
